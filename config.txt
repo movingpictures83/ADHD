@@ -1,0 +1,128 @@
+Prefix pipelines/ADHD/
+#####################################################################################################################################
+# CONTROL
+
+#Phylum
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Phylum/sorted_otu_L2.Group1.csv outputfile ADHDpaper.Group1.abund.phylum.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.phylum.csv outputfile ADHDpaper.Group1.pearson.phylum.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.phylum.csv outputfile ADHDpaper.Group1.pearson.phylum.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.phylum.csv outputfile ADHDpaper.Group1.pearson.phylum.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.phylum.csv outputfile ADHDpaper.Group1.pearson.phylum.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.phylum.csv outputfile ADHDpaper.Group1.pearson.phylum.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.phylum.ap.csv outputfile ADHDpaper.Group1.pearson.phylum.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.phylum outputfile none
+
+#Class
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Class/sorted_otu_L3.Group1.csv outputfile ADHDpaper.Group1.abund.class.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.class.csv outputfile ADHDpaper.Group1.pearson.class.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.class.csv outputfile ADHDpaper.Group1.pearson.class.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.class.csv outputfile ADHDpaper.Group1.pearson.class.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.class.csv outputfile ADHDpaper.Group1.pearson.class.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.class.csv outputfile ADHDpaper.Group1.pearson.class.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.class.ap.csv outputfile ADHDpaper.Group1.pearson.class.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.class outputfile none
+
+#Order
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Order/sorted_otu_L4.Group1.csv outputfile ADHDpaper.Group1.abund.order.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.order.csv outputfile ADHDpaper.Group1.pearson.order.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.order.csv outputfile ADHDpaper.Group1.pearson.order.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.order.csv outputfile ADHDpaper.Group1.pearson.order.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.order.csv outputfile ADHDpaper.Group1.pearson.order.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.order.csv outputfile ADHDpaper.Group1.pearson.order.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.order.ap.csv outputfile ADHDpaper.Group1.pearson.order.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.order outputfile none
+
+#Family
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Family/sorted_otu_L5.Group1.csv outputfile ADHDpaper.Group1.abund.family.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.family.csv outputfile ADHDpaper.Group1.pearson.family.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.family.csv outputfile ADHDpaper.Group1.pearson.family.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.family.csv outputfile ADHDpaper.Group1.pearson.family.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.family.csv outputfile ADHDpaper.Group1.pearson.family.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.family.csv outputfile ADHDpaper.Group1.pearson.family.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.family.ap.csv outputfile ADHDpaper.Group1.pearson.family.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.family outputfile none
+
+#Genus
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Genus/sorted_otu_L6.Group1.csv outputfile ADHDpaper.Group1.abund.genus.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.genus.csv outputfile ADHDpaper.Group1.pearson.genus.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.genus.csv outputfile ADHDpaper.Group1.pearson.genus.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.genus.csv outputfile ADHDpaper.Group1.pearson.genus.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.genus.csv outputfile ADHDpaper.Group1.pearson.genus.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.genus.csv outputfile ADHDpaper.Group1.pearson.genus.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.genus.ap.csv outputfile ADHDpaper.Group1.pearson.genus.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.genus outputfile none
+
+#Species
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Species/sorted_otu_L7.Group1.csv outputfile ADHDpaper.Group1.abund.species.csv
+Plugin Pearson inputfile ADHDpaper.Group1.abund.species.csv outputfile ADHDpaper.Group1.pearson.species.csv
+Plugin CSV2GML inputfile ADHDpaper.Group1.pearson.species.csv outputfile ADHDpaper.Group1.pearson.species.gml
+Plugin MATria inputfile ADHDpaper.Group1.pearson.species.csv outputfile ADHDpaper.Group1.pearson.species.matria.noa
+Plugin ATria inputfile ADHDpaper.Group1.pearson.species.csv outputfile ADHDpaper.Group1.pearson.species.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group1.pearson.species.csv outputfile ADHDpaper.Group1.pearson.species.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group1.pearson.species.ap.csv outputfile ADHDpaper.Group1.pearson.species.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group1.pearson.species outputfile none
+######################################################################################################################################
+
+######################################################################################################################################
+# ADHD
+
+#Phylum
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Phylum/sorted_otu_L2.Group2.csv outputfile ADHDpaper.Group2.abund.phylum.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.phylum.csv outputfile ADHDpaper.Group2.pearson.phylum.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.phylum.csv outputfile ADHDpaper.Group2.pearson.phylum.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.phylum.csv outputfile ADHDpaper.Group2.pearson.phylum.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.phylum.csv outputfile ADHDpaper.Group2.pearson.phylum.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.phylum.csv outputfile ADHDpaper.Group2.pearson.phylum.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.phylum.ap.csv outputfile ADHDpaper.Group2.pearson.phylum.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.phylum outputfile none
+
+#Class
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Class/sorted_otu_L3.Group2.csv outputfile ADHDpaper.Group2.abund.class.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.class.csv outputfile ADHDpaper.Group2.pearson.class.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.class.csv outputfile ADHDpaper.Group2.pearson.class.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.class.csv outputfile ADHDpaper.Group2.pearson.class.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.class.csv outputfile ADHDpaper.Group2.pearson.class.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.class.csv outputfile ADHDpaper.Group2.pearson.class.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.class.ap.csv outputfile ADHDpaper.Group2.pearson.class.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.class outputfile none
+
+#Order
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Order/sorted_otu_L4.Group2.csv outputfile ADHDpaper.Group2.abund.order.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.order.csv outputfile ADHDpaper.Group2.pearson.order.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.order.csv outputfile ADHDpaper.Group2.pearson.order.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.order.csv outputfile ADHDpaper.Group2.pearson.order.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.order.csv outputfile ADHDpaper.Group2.pearson.order.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.order.csv outputfile ADHDpaper.Group2.pearson.order.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.order.ap.csv outputfile ADHDpaper.Group2.pearson.order.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.order outputfile none
+
+#Family
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Family/sorted_otu_L5.Group2.csv outputfile ADHDpaper.Group2.abund.family.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.family.csv outputfile ADHDpaper.Group2.pearson.family.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.family.csv outputfile ADHDpaper.Group2.pearson.family.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.family.csv outputfile ADHDpaper.Group2.pearson.family.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.family.csv outputfile ADHDpaper.Group2.pearson.family.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.family.csv outputfile ADHDpaper.Group2.pearson.family.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.family.ap.csv outputfile ADHDpaper.Group2.pearson.family.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.family outputfile none
+
+#Genus
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Genus/sorted_otu_L6.Group2.csv outputfile ADHDpaper.Group2.abund.genus.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.genus.csv outputfile ADHDpaper.Group2.pearson.genus.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.genus.csv outputfile ADHDpaper.Group2.pearson.genus.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.genus.csv outputfile ADHDpaper.Group2.pearson.genus.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.genus.csv outputfile ADHDpaper.Group2.pearson.genus.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.genus.csv outputfile ADHDpaper.Group2.pearson.genus.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.genus.ap.csv outputfile ADHDpaper.Group2.pearson.genus.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.genus outputfile none
+
+#Species
+Plugin CSVTranspose inputfile /biorg/data/ADHD/rawdata/Species/sorted_otu_L7.Group2.csv outputfile ADHDpaper.Group2.abund.species.csv
+Plugin Pearson inputfile ADHDpaper.Group2.abund.species.csv outputfile ADHDpaper.Group2.pearson.species.csv
+Plugin CSV2GML inputfile ADHDpaper.Group2.pearson.species.csv outputfile ADHDpaper.Group2.pearson.species.gml
+Plugin MATria inputfile ADHDpaper.Group2.pearson.species.csv outputfile ADHDpaper.Group2.pearson.species.matria.csv
+Plugin ATria inputfile ADHDpaper.Group2.pearson.species.csv outputfile ADHDpaper.Group2.pearson.species.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.Group2.pearson.species.csv outputfile ADHDpaper.Group2.pearson.species.ap.csv
+Plugin ClusterCSV2NOA inputfile ADHDpaper.Group2.pearson.species.ap.csv outputfile ADHDpaper.Group2.pearson.species.ap.noa
+Plugin ModularityMaximization inputfile ADHDpaper.Group2.pearson.species outputfile none
+######################################################################################################################################
