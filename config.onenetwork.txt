@@ -1,0 +1,8 @@
+Plugin CSVTranspose inputfile ADHDpaper.abund.transpose.csv outputfile ADHDpaper.abund.csv
+Plugin Pearson inputfile ADHDpaper.abund.csv outputfile ADHDpaper.pearson.csv
+Plugin CSV2GML inputfile ADHDpaper.pearson.csv outputfile ADHDpaper.pearson.gml
+Plugin MATria inputfile ADHDpaper.pearson.csv outputfile ADHDpaper.pearson.matria.noa
+Plugin ATria inputfile ADHDpaper.pearson.csv outputfile ADHDpaper.pearson.atria.noa
+Plugin AffinityPropagation inputfile ADHDpaper.pearson.csv outputfile ADHDpaper.pearson
+Plugin ClusterCSV2NOA inputfile ADHDpaper.pearson.AP.csv outputfile ADHDpaper.pearson.AP.noa
+#Plugin ModularityMaximization inputfile ADHDpaper.pearson outputfile none

@@ -1,0 +1,6 @@
+Plugin RivalClub inputfile ADHDpaper.pearson.csv outputfile ADHDpaper.pearson.rivalclubs.csv
+Plugin Pearson inputfile ADHDpaper.abund.csv outputfile ADHDpaper.pearson.unthresholded.csv
+Plugin Pearson inputfile ADHDpaper.abund.csv outputfile ADHDpaper.pearson.thresholded.csv
+Plugin AffinityPropagation inputfile ADHDpaper.pearson.thresholded.csv outputfile ADHDpaper.pearson
+Plugin Tightness inputfile ../../tightness.txt outputfile Tightness
+Plugin TightnessStatistics inputfile Tightness outputfile tightness.stats.csv
