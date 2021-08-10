@@ -1,0 +1,6 @@
+Together/phylum/normalized.quoted.transpose.csv
+Together/class/normalized.quoted.transpose.csv
+Together/order/normalized.quoted.transpose.csv
+Together/family/normalized.quoted.transpose.csv
+Together/genus/normalized.quoted.transpose.csv
+Together/species/normalized.quoted.transpose.csv
