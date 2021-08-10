@@ -1,2 +1,0 @@
-Pipeline pipelines/ADHD/config.networks.txt
-Pipeline pipelines/ADHD/config.clubs.txt
