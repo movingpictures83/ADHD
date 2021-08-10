@@ -8,4 +8,4 @@ Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
 Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
 Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
 Plugin RemoveZero inputfile samples.csv outputfile ADHDpaper.abund.remzero.csv
-Plugin CSVFilter inputfile ADHDpaper.abund.remzero.csv outputfile ADHDpaper.abund.csv
+Plugin CSVFilter inputfile ../../../Parameters/parameters.filter.txt outputfile ADHDpaper.abund.csv
