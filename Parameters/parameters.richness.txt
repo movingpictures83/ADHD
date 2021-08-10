@@ -1,0 +1,5 @@
+otufile	pipelines/ADHD/PhyloSeq/sample.otu.csv
+mapping	pipelines/ADHD/PhyloSeq/sample.data.csv
+tree	pipelines/ADHD/PhyloSeq/sample.tax.csv
+column	Diagnosis
+measure All

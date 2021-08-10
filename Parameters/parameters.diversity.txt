@@ -1,0 +1,4 @@
+biomfile	Qiime/otu_table.biom
+mapping	Qiime/mapping.txt
+depth	15000
+tree	Qiime/rep_set.tre

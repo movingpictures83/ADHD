@@ -1,0 +1,2 @@
+csvfile	../../../PhyloSeq/sample.data.csv
+indexfile	indices.txt

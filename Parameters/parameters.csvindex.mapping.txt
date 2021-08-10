@@ -1,0 +1,2 @@
+csvfile	mapping.noheader.csv
+indexfile	indices.mapping.txt
