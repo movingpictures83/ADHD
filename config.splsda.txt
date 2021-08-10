@@ -1,0 +1,3 @@
+Plugin CSVIndex inputfile ../../../Parameters/parameters.csvindex.txt outputfile sample.data.csv
+Plugin CSV2PLSDA inputfile ../../../Parameters/parameters.csv2plsda.txt outputfile .
+Plugin SPLSDA inputfile ../../../Parameters/parameters.splsda.txt outputfile splsda

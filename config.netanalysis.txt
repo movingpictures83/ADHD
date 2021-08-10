@@ -1,0 +1,9 @@
+#MOVED
+#Plugin Copy inputfile ../../Together/phylum/normalized.quoted.transpose.padded.csv outputfile phylum/allsamples.csv
+#Plugin Copy inputfile ../../Together/class/normalized.quoted.transpose.padded.csv outputfile class/allsamples.csv
+#Plugin Copy inputfile ../../Together/order/normalized.quoted.transpose.padded.csv outputfile order/allsamples.csv
+#Plugin Copy inputfile ../../Together/family/normalized.quoted.transpose.padded.csv outputfile family/allsamples.csv
+#Plugin Copy inputfile ../../Together/genus/normalized.quoted.transpose.padded.csv outputfile genus/allsamples.csv
+#Plugin Copy inputfile ../../Together/species/normalized.quoted.transpose.padded.csv outputfile species/allsamples.csv
+Pipeline pipelines/ADHD/config.networks.txt
+Pipeline pipelines/ADHD/config.clubs.txt

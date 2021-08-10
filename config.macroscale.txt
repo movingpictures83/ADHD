@@ -1,0 +1,3 @@
+#Pipeline pipelines/ADHD/config.diversity.txt
+Pipeline pipelines/ADHD/config.compositional.txt
+Pipeline pipelines/ADHD/config.differential.txt

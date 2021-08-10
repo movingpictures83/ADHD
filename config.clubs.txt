@@ -1,6 +1,12 @@
 Kitty phylum
 Pipeline pipelines/ADHD/config.oneclub.txt
+Kitty class
+Pipeline pipelines/ADHD/config.oneclub.txt
+Kitty order
+Pipeline pipelines/ADHD/config.oneclub.txt
 Kitty family
+Pipeline pipelines/ADHD/config.oneclub.txt
+Kitty genus
 Pipeline pipelines/ADHD/config.oneclub.txt
 Kitty species
 Pipeline pipelines/ADHD/config.oneclub.txt

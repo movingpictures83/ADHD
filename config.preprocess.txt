@@ -1,0 +1,72 @@
+Prefix pipelines/ADHD/
+####################################################################################################
+# COPY QIIME DATA
+Plugin Copy inputfile Qiime/otu_table_L2.txt outputfile Together/phylum/normalized.unfiltered.tsv
+Plugin Copy inputfile Qiime/otu_table_L3.txt outputfile Together/class/normalized.unfiltered.tsv
+Plugin Copy inputfile Qiime/otu_table_L4.txt outputfile Together/order/normalized.unfiltered.tsv
+Plugin Copy inputfile Qiime/otu_table_L5.txt outputfile Together/family/normalized.unfiltered.tsv
+Plugin Copy inputfile Qiime/otu_table_L6.txt outputfile Together/genus/normalized.unfiltered.tsv
+Pluyin Copy inputfile Qiime/otu_table_L7.txt outputfile Together/species/normalized.unfiltered.tsv
+####################################################################################################
+
+####################################################################################################
+# COPY QIIME METADATA
+#Plugin TSV2CSV inputfile pipelines/ADHD/Qiime/mapping.txt outputfile PhyloSeq/sample.data.csv
+Plugin CSVUnPad inputfile PhyloSeq/sample.data.csv outputfile PhyloSeq/sample.data.unpadded.csv
+Plugin CSVPad inputfile PhyloSeq/sample.data.unpadded.csv outputfile PhyloSeq/sample.data.padded.csv
+Plugin RemoveRow inputfile Parameters/parameters.removerow.txt outputfile mapping.noheader.tsv
+Plugin TSV2CSV inputfile mapping.noheader.tsv outputfile mapping.noheader.csv
+Plugin CSVIndex inputfile Parameters/parameters.csvindex.mapping.txt outputfile counts.csv
+Plugin CSV2TSV inputfile counts.csv outputfile counts.tsv
+####################################################################################################
+
+####################################################################################################
+# RUN UNFILTERED CONVERSIONS
+Kitty Together/phylum
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+Kitty Together/class
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+Kitty Together/order
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+Kitty Together/family
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+Kitty Together/genus
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+Kitty Together/species
+Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
+
+####################################################################################################
+
+####################################################################################################
+# SEPARATE SAMPLES BY CTRL AND ADHD, REMOVE ZERO, FILTER
+Kitty Networks/Control
+Pipeline pipelines/ADHD/config.split.txt
+Kitty Networks/ADHD
+Pipeline pipelines/ADHD/config.split.txt
+Kitty .
+####################################################################################################
+
+####################################################################################################
+# MERGE FILTERED SAMPLES BACK TOGETHER
+Plugin CSVMerge inputfile Merge/merge.phylum.txt outputfile Together/phylum/normalized.tmp.tmp.csv
+Plugin CSVMerge inputfile Merge/merge.class.txt outputfile Together/class/normalized.tmp.tmp.csv
+Plugin CSVMerge inputfile Merge/merge.order.txt outputfile Together/order/normalized.tmp.tmp.csv
+Plugin CSVMerge inputfile Merge/merge.family.txt outputfile Together/family/normalized.tmp.tmp.csv
+Plugin CSVMerge inputfile Merge/merge.genus.txt outputfile Together/genus/normalized.tmp.tmp.csv
+Plugin CSVMerge inputfile Merge/merge.species.txt outputfile Together/species/normalized.tmp.tmp.csv
+####################################################################################################
+
+Kitty Together/phylum
+Pipeline pipelines/ADHD/config.conversions.txt
+Kitty Together/class
+Pipeline pipelines/ADHD/config.conversions.txt
+Kitty Together/order
+Pipeline pipelines/ADHD/config.conversions.txt
+Kitty Together/family
+Pipeline pipelines/ADHD/config.conversions.txt
+Kitty Together/genus
+Pipeline pipelines/ADHD/config.conversions.txt
+Kitty Together/species
+Pipeline pipelines/ADHD/config.conversions.txt
+Prefix pipelines/ADHD/
+Plugin Qiime2PhyloSeq inputfile Parameters/parameters.qiime2phyloseq.txt outputfile PhyloSeq/sample

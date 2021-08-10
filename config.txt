@@ -1,6 +1,4 @@
 Prefix pipelines/ADHD/
-
-Kitty Control
-Pipeline pipelines/ADHD/config.analysis.txt
-Kitty ADHD
-Pipeline pipelines/ADHD/config.analysis.txt
+Pipeline pipelines/ADHD/config.preprocess.txt
+Pipeline pipelines/ADHD/config.macroscale.txt
+Pipeline pipelines/ADHD/config.ecology.txt

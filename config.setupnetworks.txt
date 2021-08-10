@@ -1,0 +1,6 @@
+Copy inputfile ../../Together/phylum/normalized.quoted.transpose.padded.csv phylum/allsamples.csv
+Copy inputfile ../../Together/class/normalized.quoted.transpose.padded.csv class/allsamples.csv
+Copy inputfile ../../Together/order/normalized.quoted.transpose.padded.csv order/allsamples.csv
+Copy inputfile ../../Together/family/normalized.quoted.transpose.padded.csv family/allsamples.csv
+Copy inputfile ../../Together/genus/normalized.quoted.transpose.padded.csv genus/allsamples.csv
+Copy inputfile ../../Together/species/normalized.quoted.transpose.padded.csv species/allsamples.csv

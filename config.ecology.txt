@@ -1,0 +1,8 @@
+Prefix pipelines/ADHD/
+#MOVED
+#Plugin CSVUnPad inputfile PhyloSeq/sample.data.csv outputfile PhyloSeq/sample.data.unpadded.csv
+#Plugin CSVPad inputfile PhyloSeq/sample.data.unpadded.csv outputfile PhyloSeq/sample.data.padded.csv
+Kitty Networks/Control
+Pipeline pipelines/ADHD/config.netanalysis.txt
+Kitty Networks/ADHD
+Pipeline pipelines/ADHD/config.netanalysis.txt

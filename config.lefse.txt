@@ -1,0 +1,5 @@
+Prefix pipelines/ADHD/
+Plugin PhyloSeqNormalize inputfile PhyloSeq/sample.otu.csv outputfile PhyloSeq/sample.otu.norm.csv
+Plugin PhyloSeq2LEfSe inputfile Differential/LEfSe/parameters.phyloseq2lefse.txt outputfile PhyloSeq/otus.lefse.txt
+Plugin RemoveUnclassified inputfile PhyloSeq/otus.lefse.txt outputfile PhyloSeq/otus.lefse.nounclass.txt
+Plugin LEfSe inputfile Differential/LEfSe/parameters.lefse.txt outputfile Differential/LEfSe/ADHD.lefse

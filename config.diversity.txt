@@ -1,0 +1,3 @@
+Prefix pipelines/ADHD/
+Plugin PlotAlphaDiversity inputfile Parameters/parameters.diversity.txt outputfile Diversity/Alpha
+Plugin PlotBetaDiversity3D inputfile Parameters/parameters.diversity.txt outputfile Diversity/Beta

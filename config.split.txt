@@ -1,0 +1,18 @@
+Plugin Copy inputfile ../../Together/phylum/normalized.unfiltered.quoted.transpose.csv outputfile phylum/allsamples.csv
+Plugin Copy inputfile ../../Together/class/normalized.unfiltered.quoted.transpose.csv outputfile class/allsamples.csv
+Plugin Copy inputfile ../../Together/order/normalized.unfiltered.quoted.transpose.csv outputfile order/allsamples.csv
+Plugin Copy inputfile ../../Together/family/normalized.unfiltered.quoted.transpose.csv outputfile family/allsamples.csv
+Plugin Copy inputfile ../../Together/genus/normalized.unfiltered.quoted.transpose.csv outputfile genus/allsamples.csv
+Plugin Copy inputfile ../../Together/species/normalized.unfiltered.quoted.transpose.csv outputfile species/allsamples.csv
+Kitty phylum
+Pipeline pipelines/ADHD/config.taxonomy.txt
+Kitty class
+Pipeline pipelines/ADHD/config.taxonomy.txt
+Kitty order
+Pipeline pipelines/ADHD/config.taxonomy.txt
+Kitty family
+Pipeline pipelines/ADHD/config.taxonomy.txt
+Kitty genus
+Pipeline pipelines/ADHD/config.taxonomy.txt
+Kitty species
+Pipeline pipelines/ADHD/config.taxonomy.txt

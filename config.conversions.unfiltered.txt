@@ -1,0 +1,4 @@
+Plugin TSV2CSV inputfile normalized.unfiltered.tsv outputfile normalized.unfiltered.csv
+Plugin CSVQuote inputfile normalized.unfiltered.csv outputfile normalized.unfiltered.quoted.csv
+Plugin CSVTranspose inputfile normalized.unfiltered.quoted.csv outputfile normalized.unfiltered.quoted.transpose.csv
+Plugin CSVPad inputfile normalized.unfiltered.quoted.transpose.csv outputfile normalized.unfiltered.quoted.transpose.padded.csv

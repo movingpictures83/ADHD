@@ -1,0 +1,7 @@
+Prefix pipelines/ADHD/
+Plugin CSVTranspose inputfile Together/species/normalized.quoted.csv outputfile Differential/SPLSDA/normalized.transpose.csv
+Kitty Differential/SPLSDA/SampleType
+Pipeline pipelines/ADHD/config.splsda.txt
+Kitty Differential/SPLSDA/ASRS
+Pipeline pipelines/ADHD/config.splsda.txt
+Pipeline pipelines/ADHD/config.lefse.txt

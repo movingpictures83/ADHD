@@ -1,0 +1,11 @@
+Plugin CSVMerge inputfile ../../../merge.sampledata.txt outputfile allsamples.withdata.csv
+Plugin CSVExtract inputfile ../extract.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin CSVRemove inputfile ../../../remove.txt outputfile samples.csv
+Plugin RemoveZero inputfile samples.csv outputfile ADHDpaper.abund.remzero.csv
+Plugin CSVFilter inputfile ADHDpaper.abund.remzero.csv outputfile ADHDpaper.abund.csv

@@ -1,0 +1,23 @@
+#Plugin TSVFilter inputfile normalized.unfiltered.tsv outputfile normalized.tmp.tsv
+Plugin CSVTranspose inputfile normalized.tmp.tmp.csv outputfile normalized.tmp.tmp.transpose.csv
+Plugin CSV2TSV inputfile normalized.tmp.tmp.transpose.csv outputfile normalized.tmp.tsv
+Plugin TSV2CSV inputfile normalized.tmp.tsv outputfile normalized.tmp.csv
+Plugin CSVTranspose inputfile normalized.tmp.csv outputfile normalized.tmp.transpose.csv
+Plugin CSVUnNormalize inputfile ../../Parameters/parameters.unnormalize.txt outputfile unnormalized.transpose.csv
+Plugin CSVNormalize inputfile unnormalized.transpose.csv outputfile normalized.transpose.csv
+Plugin CSVTranspose inputfile unnormalized.transpose.csv outputfile unnormalized.csv
+Plugin CSVTranspose inputfile normalized.transpose.csv outputfile normalized.csv
+Plugin CSV2TSV inputfile unnormalized.csv outputfile unnormalized.tsv
+Plugin CSV2TSV inputfile normalized.csv outputfile normalized.tsv
+# SAME FILE, FIX LATER
+Plugin Copy inputfile normalized.csv outputfile normalized.quoted.csv
+Plugin CSVTranspose inputfile normalized.quoted.csv outputfile normalized.quoted.transpose.csv
+Plugin Copy inputfile unnormalized.csv outputfile unnormalized.quoted.csv
+Plugin CSVTranspose inputfile normalized.quoted.csv outputfile normalized.quoted.transpose.csv
+#Plugin CSVTranspose inputfile normalized.csv outputfile normalized.transpose.csv
+#Plugin CSVQuote inputfile normalized.csv outputfile normalized.quoted.csv
+#Plugin TSV2CSV inputfile unnormalized.tsv outputfile unnormalized.csv
+#Plugin CSVQuote inputfile unnormalized.csv outputfile unnormalized.quoted.csv
+#Plugin CSVTranspose inputfile unnormalized.quoted.csv outputfile unnormalized.quoted.transpose.csv
+Plugin CSVUnPad inputfile normalized.quoted.transpose.csv outputfile normalized.quoted.transpose.unpadded.csv
+Plugin CSVPad inputfile normalized.quoted.transpose.unpadded.csv outputfile normalized.quoted.transpose.padded.csv
