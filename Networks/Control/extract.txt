@@ -1,0 +1,3 @@
+inputfile	allsamples.withdata.csv
+column	7
+value	"Control"
