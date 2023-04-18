@@ -1,0 +1,9 @@
+Prefix pipelines/ADHD
+Plugin TSV2CSV inputfile Together/species/normalized.tsv outputfile Together/species/normalized.csv
+Plugin CSVQuote inputfile Together/species/normalized.csv outputfile Together/species/normalized.quoted.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.phylum.txt outputfile TaxaPlots/normalized.sortASRS.phylum.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.class.txt outputfile TaxaPlots/normalized.sortASRS.class.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.order.txt outputfile TaxaPlots/normalized.sortASRS.order.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.family.txt outputfile TaxaPlots/normalized.sortASRS.family.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.genus.txt outputfile TaxaPlots/normalized.sortASRS.genus.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.species.txt outputfile TaxaPlots/normalized.sortASRS.species.csv

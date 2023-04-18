@@ -1,9 +1,0 @@
-Prefix pipelines/ADHD
-Plugin TSV2CSV inputfile Together/species/normalized.tsv outputfile Together/species/normalized.csv
-Plugin CSVQuote inputfile Together/species/normalized.csv outputfile Together/species/normalized.quoted.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.phylum.txt outputfile Compositional/normalized.sortASRS.phylum.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.class.txt outputfile Compositional/normalized.sortASRS.class.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.order.txt outputfile Compositional/normalized.sortASRS.order.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.family.txt outputfile Compositional/normalized.sortASRS.family.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.genus.txt outputfile Compositional/normalized.sortASRS.genus.csv
-Plugin SortSamples inputfile Parameters/parameters.compositional.species.txt outputfile Compositional/normalized.sortASRS.species.csv
