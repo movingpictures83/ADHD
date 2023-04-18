@@ -1,0 +1,5 @@
+OTU	PhyloSeq/sample.otu.unfiltered.norm.csv
+TAX	PhyloSeq/sample.tax.csv
+META	PhyloSeq/sample.data.csv
+LEVEL	7
+DESC	Description
