@@ -1,3 +1,9 @@
 Prefix pipelines/ADHD/
-Plugin PlotAlphaDiversity inputfile Parameters/parameters.diversity.txt outputfile Diversity/Alpha
-Plugin PlotBetaDiversity3D inputfile Parameters/parameters.diversity.txt outputfile Diversity/Beta
+Kitty Diversity/Regular
+Pipeline pipelines/ADHD/config.diversityeach.txt
+Kitty Diversity/Extreme
+Pipeline pipelines/ADHD/config.diversityeach.txt
+Kitty Diversity/Inattention
+Pipeline pipelines/ADHD/config.diversityeach.txt
+Kitty Diversity/Hyperactivity
+Pipeline pipelines/ADHD/config.diversityeach.txt
