@@ -1,3 +1,0 @@
-otufile	Together/class/normalized.quoted.csv
-metadata	PhyloSeq/sample.data.csv
-orderby	"Total"
