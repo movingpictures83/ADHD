@@ -1,0 +1,3 @@
+abundance	PhyloSeq/sample.otu.clr.csv
+taxonomy	PhyloSeq/sample.tax.csv
+level	7
