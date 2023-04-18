@@ -1,0 +1,8 @@
+inputfile	PhyloSeq/otus.lefse.nounclass.unfiltered.hyperactivity.txt
+class	2
+subclass	-1
+subject	1
+wilcoxon_alpha	0.025
+anova_alpha	1
+lda_abs_th	2
+outputdir	Differential/LEfSe/Biomarkers/
