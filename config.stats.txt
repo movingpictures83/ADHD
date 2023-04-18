@@ -1,0 +1,8 @@
+Prefix pipelines/ADHD/
+Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
+Kitty Diversity/Regular
+Pipeline pipelines/ADHD/config.diversitystats.txt
+Kitty Diversity/Hyperactivity
+Pipeline pipelines/ADHD/config.diversitystats.txt
+Kitty Diversity/Inattention
+Pipeline pipelines/ADHD/config.diversitystats.txt

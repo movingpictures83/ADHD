@@ -1,0 +1,5 @@
+Plugin AlphaTTest inputfile ../../Parameters/parameters.alphattest.observed.txt outputfile Alpha/Observed
+Plugin AlphaTTest inputfile ../../Parameters/parameters.alphattest.chao1.txt outputfile Alpha/Chao1
+Plugin AlphaTTest inputfile ../../Parameters/parameters.alphattest.pdtree.txt outputfile Alpha/PDTree
+Plugin ADONIS inputfile ../../Parameters/parameters.adonis.uunifrac.txt outputfile Beta/UUniFrac
+Plugin ADONIS inputfile ../../Parameters/parameters.adonis.wunifrac.txt outputfile Beta/WUniFrac
