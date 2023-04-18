@@ -11,7 +11,7 @@ Pluyin Copy inputfile Qiime/otu_table_L7.txt outputfile Together/species/normali
 
 ####################################################################################################
 # COPY QIIME METADATA
-#Plugin TSV2CSV inputfile pipelines/ADHD/Qiime/mapping.txt outputfile PhyloSeq/sample.data.csv
+Plugin TSV2CSV inputfile pipelines/ADHD/Qiime/mapping.txt outputfile PhyloSeq/sample.data.csv
 Plugin CSVUnPad inputfile PhyloSeq/sample.data.csv outputfile PhyloSeq/sample.data.unpadded.csv
 Plugin CSVPad inputfile PhyloSeq/sample.data.unpadded.csv outputfile PhyloSeq/sample.data.padded.csv
 Plugin RemoveRow inputfile Parameters/parameters.removerow.txt outputfile mapping.noheader.tsv
