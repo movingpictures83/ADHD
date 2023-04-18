@@ -1,0 +1,3 @@
+Plugin SortByCluster inputfile ../../../Parameters/parameters.sortbycluster.txt outputfile ADHDpaper.sparcc.AP.sortedclusters.csv
+Plugin CSVNoDup inputfile ADHDpaper.sparcc.AP.sortedclusters.csv outputfile ADHDpaper.sparcc.AP.sortedclusters.nodups.csv
+Plugin Heatmap inputfile ADHDpaper.sparcc.AP.sortedclusters.nodups.csv outputfile ADHDpaper.heatmap
