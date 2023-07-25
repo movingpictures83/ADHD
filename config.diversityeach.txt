@@ -1,2 +1,0 @@
-Plugin PlotAlphaDiversity inputfile ../../Parameters/parameters.diversity.txt outputfile Alpha
-Plugin PlotBetaDiversity3D inputfile ../../Parameters/parameters.diversity.txt outputfile Beta
