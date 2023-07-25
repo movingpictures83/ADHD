@@ -1,0 +1,5 @@
+taxa	Together/species/unnormalized.quoted.transpose2.csv
+deseq	deseq.csv
+group1	Control
+group2	ADHD
+pvalue	0.05
