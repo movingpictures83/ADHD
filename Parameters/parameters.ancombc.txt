@@ -1,0 +1,4 @@
+otufile	PhyloSeq/sample.otu.unfiltered.csv
+tree	PhyloSeq/sample.tax.csv
+mapping	PhyloSeq/sample.data.csv
+column	Description
