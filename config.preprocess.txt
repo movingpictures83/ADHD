@@ -10,7 +10,7 @@ Pluyin Copy inputfile Qiime/otu_table_L7.txt outputfile Together/species/normali
 ####################################################################################################
 
 ####################################################################################################
-# COPY QIIME METADATA
+# CONVERT QIIME METADATA
 Plugin TSV2CSV inputfile pipelines/ADHD/Qiime/mapping.txt outputfile PhyloSeq/sample.data.csv
 Plugin CSVUnPad inputfile PhyloSeq/sample.data.csv outputfile PhyloSeq/sample.data.unpadded.csv
 Plugin CSVPad inputfile PhyloSeq/sample.data.unpadded.csv outputfile PhyloSeq/sample.data.padded.csv
@@ -34,11 +34,10 @@ Kitty Together/genus
 Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
 Kitty Together/species
 Pipeline pipelines/ADHD/config.conversions.unfiltered.txt
-
 ####################################################################################################
 
 ####################################################################################################
-# SEPARATE SAMPLES BY CTRL AND ADHD, REMOVE ZERO, FILTER
+# SEPARATE SAMPLES BY CTRL AND ADHD, REMOVE ZERO, PREVALENCE FILTER
 Kitty Networks/Control
 Pipeline pipelines/ADHD/config.split.txt
 Kitty Networks/ADHD
@@ -56,17 +55,24 @@ Plugin CSVMerge inputfile Merge/merge.genus.txt outputfile Together/genus/normal
 Plugin CSVMerge inputfile Merge/merge.species.txt outputfile Together/species/normalized.tmp.tmp.csv
 ####################################################################################################
 
+####################################################################################################
+# RUN FILTERED CONVERSIONS
 Kitty Together/phylum
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Kitty Together/class
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Kitty Together/order
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Kitty Together/family
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Kitty Together/genus
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Kitty Together/species
-Pipeline pipelines/ADHD/config.conversions.txt
+Pipeline pipelines/ADHD/config.conversions.filtered.txt
+####################################################################################################
+
+####################################################################################################
+# CONVERT QIIME INPUT TO PHYLOSEQ
 Prefix pipelines/ADHD/
 Plugin Qiime2PhyloSeq inputfile Parameters/parameters.qiime2phyloseq.txt outputfile PhyloSeq/sample
+####################################################################################################
