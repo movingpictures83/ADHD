@@ -1,9 +1,0 @@
-Prefix pipelines/ADHD/
-Kitty Diversity/Regular
-Pipeline pipelines/ADHD/config.diversityeach.txt
-Kitty Diversity/Extreme
-Pipeline pipelines/ADHD/config.diversityeach.txt
-Kitty Diversity/Inattention
-Pipeline pipelines/ADHD/config.diversityeach.txt
-Kitty Diversity/Hyperactivity
-Pipeline pipelines/ADHD/config.diversityeach.txt
