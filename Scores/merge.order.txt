@@ -1,2 +1,0 @@
-Compositional/normalized.sortASRS.order.transpose.csv
-PhyloSeq/sample.data.scores.csv
