@@ -1,0 +1,4 @@
+abund	PhyloSeq/sample.otu.unfiltered.csv
+twocol	PhyloSeq/sample.data.twocol.csv
+control	"Control"
+case	"ADHD"
