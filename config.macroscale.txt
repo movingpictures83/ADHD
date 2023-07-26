@@ -1,4 +1,9 @@
 ###############################################################
+# TETACHORIC
+Plugin Tetachoric inputfile Parameters/parameters.tetachoric.txt outputfile none
+###############################################################
+
+###############################################################
 # DIVERSITY
 Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
 Kitty Diversity/Regular
@@ -53,6 +58,13 @@ Plugin LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.lefse.txt outp
 Plugin DESeq inputfile Parameters/parameters.deseq.txt outputfile Differential/DESeq/deseq.csv
 Plugin DESeq2TXT inputfile Parameters/parameters.deseq2txt.txt outputfile Differential/DESeq/deseq.txt
 #######################################################################################################
+
+
+#######################################################################################################
+# ALDEx2
+Plugin ALDEx2 inputfile Parameters/parameters.aldex2.txt outputfile Differential/ALDEx2/output
+#######################################################################################################
+#######################################################################################################################
 
 #######################################################################################################
 # ANCOM-BC
