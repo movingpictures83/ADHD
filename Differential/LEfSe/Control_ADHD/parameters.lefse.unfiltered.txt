@@ -2,7 +2,7 @@ inputfile	PhyloSeq/otus.lefse.nounclass.unfiltered.txt
 class	2
 subclass	-1
 subject	1
-wilcoxon_alpha	0.025
+wilcoxon_alpha	0.01
 anova_alpha	1
-lda_abs_th	2.4
+lda_abs_th	2
 outputdir	Differential/LEfSe/Biomarkers/

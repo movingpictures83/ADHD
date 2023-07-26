@@ -76,3 +76,18 @@ Pipeline pipelines/ADHD/config.conversions.filtered.txt
 Prefix pipelines/ADHD/
 Plugin Qiime2PhyloSeq inputfile Parameters/parameters.qiime2phyloseq.txt outputfile PhyloSeq/sample
 ####################################################################################################
+
+####################################################################################################
+# FINAL CONVERSIONS
+Plugin TSV2CSV inputfile Together/species/normalized.tsv outputfile Together/species/normalized.csv
+Plugin CSVQuote inputfile Together/species/normalized.csv outputfile Together/species/normalized.quoted.csv
+Plugin PhyloSeqNormalize inputfile PhyloSeq/sample.otu.csv outputfile PhyloSeq/sample.otu.norm.csv
+Plugin CSVUnPad inputfile PhyloSeq/sample.data.csv outputfile PhyloSeq/sample.data.unpadded.csv
+Plugin CSVPad inputfile PhyloSeq/sample.data.unpadded.csv outputfile PhyloSeq/sample.data.padded.csv
+Plugin CSVTranspose inputfile Together/phylum/unnormalized.quoted.csv outputfile Together/phylum/unnormalized.quoted.transpose.csv
+Plugin CSVTranspose inputfile Together/class/unnormalized.quoted.csv outputfile Together/class/unnormalized.quoted.transpose.csv
+Plugin CSVTranspose inputfile Together/order/unnormalized.quoted.csv outputfile Together/order/unnormalized.quoted.transpose.csv
+Plugin CSVTranspose inputfile Together/family/unnormalized.quoted.csv outputfile Together/family/unnormalized.quoted.transpose.csv
+Plugin CSVTranspose inputfile Together/genus/unnormalized.quoted.csv outputfile Together/genus/unnormalized.quoted.transpose.csv
+Plugin CSVTranspose inputfile Together/species/unnormalized.quoted.csv outputfile Together/species/unnormalized.quoted.transpos
+####################################################################################################

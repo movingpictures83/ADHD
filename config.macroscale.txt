@@ -1,3 +1,61 @@
+###############################################################
+# DIVERSITY
+Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
+Kitty Diversity/Regular
 Pipeline pipelines/ADHD/config.diversity.txt
-Pipeline pipelines/ADHD/config.taxaplots.txt
-Pipeline pipelines/ADHD/config.differential.txt
+###############################################################
+
+###############################################################
+# TAXA PLOTS
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.phylum.txt outputfile TaxaPlots/normalized.sortASRS.phylum.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.class.txt outputfile TaxaPlots/normalized.sortASRS.class.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.order.txt outputfile TaxaPlots/normalized.sortASRS.order.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.family.txt outputfile TaxaPlots/normalized.sortASRS.family.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.genus.txt outputfile TaxaPlots/normalized.sortASRS.genus.csv
+Plugin SortSamples inputfile Parameters/parameters.taxaplots.species.txt outputfile TaxaPlots/normalized.sortASRS.species.csv
+###############################################################
+
+#######################################################################################################################
+# DIFFERENTIAL ABUNDANCE
+#################################################################################################
+# CLR TRANSFORM, CONVERT FORMAT
+Plugin CLR inputfile Parameters/parameters.clr.txt outputfile PhyloSeq/sample.otu.clr.csv
+Plugin PhyloSeq2CSV inputfile Parameters/parameters.phyloseq2csv.txt outputfile Differential/SPLSDA/clr.csv
+Plugin CSVTranspose inputfile Differential/SPLSDA/clr.csv outputfile Differential/SPLSDA/normalized.transpose.csv
+#################################################################################################
+
+#######################################################################################################
+# SPLSDA
+Kitty Differential/SPLSDA/SampleType
+Pipeline pipelines/ADHD/config.splsda.txt
+Kitty .
+#######################################################
+# FUTURE WORK
+#Kitty Differential/SPLSDA/ASRS
+#Pipeline pipelines/ADHD/config.splsda.txt
+#######################################################
+#######################################################################################################
+
+#######################################################################################################
+# LEFSE
+Plugin PhyloSeq2LEfSe inputfile Differential/LEfSe/parameters.phyloseq2lefse.txt outputfile PhyloSeq/otus.lefse.txt
+Plugin RemoveUnclassified inputfile PhyloSeq/otus.lefse.txt outputfile PhyloSeq/otus.lefse.nounclass.txt
+Plugin PhyloSeqNormalize inputfile PhyloSeq/sample.otu.unfiltered.csv outputfile PhyloSeq/sample.otu.unfiltered.norm.csv
+Plugin PhyloSeq2LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.phyloseq2lefse.unfiltered.txt outputfile PhyloSeq/otus.lefse.unfiltered.txt
+Plugin RemoveUnclassified inputfile PhyloSeq/otus.lefse.unfiltered.txt outputfile PhyloSeq/otus.lefse.nounclass.unfiltered.txt
+Plugin CSVUnNormalize inputfile Parameters/parameters.unnormalize.nofilter.txt outputfile Together/species/unnormalized.nofilter.csv
+Plugin CSVTranspose inputfile Together/species/unnormalized.nofilter.csv outputfile Together/species/unnormalized.nofilter.transpose.csv
+Plugin LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.lefse.txt outputfile Differential/LEfSe/Control_ADHD/ADHD.lefse
+#######################################################################################################
+
+#######################################################################################################
+# DESEQ
+Plugin DESeq inputfile Parameters/parameters.deseq.txt outputfile Differential/DESeq/deseq.csv
+Plugin DESeq2TXT inputfile Parameters/parameters.deseq2txt.txt outputfile Differential/DESeq/deseq.txt
+#######################################################################################################
+
+#######################################################################################################
+# ANCOM-BC
+Plugin ANCOMBC inputfile Parameters/parameters.ancombc.txt outputfile Differential/ANCOMBC/ancombc.csv
+#######################################################################################################
+#######################################################################################################################
