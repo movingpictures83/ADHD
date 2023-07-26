@@ -4,7 +4,7 @@ Plugin Abundance inputfile ADHDpaper.abund.csv outputfile ADHDpaper.abund.noa
 Plugin CSVTranspose inputfile ADHDpaper.abund.csv outputfile ADHDpaper.abund.transpose.csv
 Plugin CSV2TSV inputfile ADHDpaper.abund.transpose.csv outputfile ADHDpaper.abund.transpose.tsv
 Plugin TSVPerturb inputfile ADHDpaper.abund.transpose.tsv outputfile ADHDpaper.abund.transpose.perturb.tsv
-Plugin SparCC inputfile ADHDpaper.abund.transpose.perturb2.tsv outputfile ADHDpaper.sparcc.unquoted.csv
+Plugin SparCC inputfile ADHDpaper.abund.transpose.perturb.tsv outputfile ADHDpaper.sparcc.unquoted.csv
 Plugin CSVQuote inputfile ADHDpaper.sparcc.unquoted.csv outputfile ADHDpaper.sparcc.csv
 Plugin CSV2GML inputfile ADHDpaper.sparcc.csv outputfile ADHDpaper.sparcc.gml
 Plugin ATria inputfile ADHDpaper.sparcc.csv outputfile ADHDpaper.sparcc.atria.noa
