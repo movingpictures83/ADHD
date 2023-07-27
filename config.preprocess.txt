@@ -76,6 +76,7 @@ Pipeline pipelines/ADHD/config.conversions.filtered.txt
 # CONVERT QIIME INPUT TO PHYLOSEQ
 Prefix pipelines/ADHD/
 Plugin Qiime2PhyloSeq inputfile Parameters/parameters.qiime2phyloseq.txt outputfile PhyloSeq/sample
+Plugin Qiime2PhyloSeq inputfile Parameters/parameters.qiime2phyloseq.unfiltered.txt outputfile PhyloSeq/sample.unfiltered
 ####################################################################################################
 
 ####################################################################################################
@@ -91,4 +92,5 @@ Plugin CSVTranspose inputfile Together/order/unnormalized.quoted.csv outputfile 
 Plugin CSVTranspose inputfile Together/family/unnormalized.quoted.csv outputfile Together/family/unnormalized.quoted.transpose.csv
 Plugin CSVTranspose inputfile Together/genus/unnormalized.quoted.csv outputfile Together/genus/unnormalized.quoted.transpose.csv
 Plugin CSVTranspose inputfile Together/species/unnormalized.quoted.csv outputfile Together/species/unnormalized.quoted.transpos
+Plugin PhyloSeqFilter inputfile Parameters/parameters.phyloseqfilter.txt outputfile PhyloSeq/
 ####################################################################################################

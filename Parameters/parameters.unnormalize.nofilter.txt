@@ -1,2 +1,2 @@
-Together/species/normalized.unfiltered.quoted.transpose.csv
-counts.tsv
+normalized.unfiltered.quoted.transpose.csv
+../../counts.tsv

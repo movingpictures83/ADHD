@@ -1,4 +1,4 @@
-otufile	PhyloSeq/sample.otu.unfiltered.csv
-tree	PhyloSeq/sample.tax.csv
+otufile	PhyloSeq/sample.otu.partialfilter.csv
+tree	PhyloSeq/sample.tax.partialfilter.csv
 mapping	PhyloSeq/sample.data.csv
 column	Description

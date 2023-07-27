@@ -5,10 +5,10 @@ Plugin Tetachoric inputfile Parameters/parameters.tetachoric.txt outputfile none
 
 ###############################################################
 # DIVERSITY
-Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
-Kitty Diversity/Regular
-Pipeline pipelines/ADHD/config.diversity.txt
-Kitty .
+#Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
+#Kitty Diversity/Regular
+#Pipeline pipelines/ADHD/config.diversity.txt
+#Kitty .
 ###############################################################
 
 ###############################################################
@@ -44,18 +44,16 @@ Kitty .
 
 #######################################################################################################
 # LEFSE
-Plugin PhyloSeq2LEfSe inputfile Differential/LEfSe/parameters.phyloseq2lefse.txt outputfile PhyloSeq/otus.lefse.txt
-Plugin RemoveUnclassified inputfile PhyloSeq/otus.lefse.txt outputfile PhyloSeq/otus.lefse.nounclass.txt
-Plugin PhyloSeqNormalize inputfile PhyloSeq/sample.otu.unfiltered.csv outputfile PhyloSeq/sample.otu.unfiltered.norm.csv
 Plugin PhyloSeq2LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.phyloseq2lefse.unfiltered.txt outputfile PhyloSeq/otus.lefse.unfiltered.txt
 Plugin RemoveUnclassified inputfile PhyloSeq/otus.lefse.unfiltered.txt outputfile PhyloSeq/otus.lefse.nounclass.unfiltered.txt
-Plugin CSVUnNormalize inputfile Parameters/parameters.unnormalize.nofilter.txt outputfile Together/species/unnormalized.nofilter.csv
-Plugin CSVTranspose inputfile Together/species/unnormalized.nofilter.csv outputfile Together/species/unnormalized.nofilter.transpose.csv
 Plugin LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.lefse.txt outputfile Differential/LEfSe/Control_ADHD/ADHD.lefse
 #######################################################################################################
 
-#######################################################################################################
+########################################################################################################
 # DESEQ
+#Plugin PhyloSeq2CSV inputfile Parameters/parameters.phyloseq2csv.txt outputfile Together/species/unnormalized.nofilter.exact.csv
+#Plugin CSVTranspose inputfile Together/species/unnormalized.nofilter.exact.csv outputfile Together/species/unnormalized.nofilter.exact.transpose.csv
+Plugin CSVSmooth inputfile smooth.txt outputfile Together/species/unnormalized.nofilter.exact.transpose.csv
 Plugin DESeq inputfile Parameters/parameters.deseq.txt outputfile Differential/DESeq/deseq.csv
 Plugin DESeq2TXT inputfile Parameters/parameters.deseq2txt.txt outputfile Differential/DESeq/deseq.txt
 #######################################################################################################
@@ -63,6 +61,8 @@ Plugin DESeq2TXT inputfile Parameters/parameters.deseq2txt.txt outputfile Differ
 
 #######################################################################################################
 # ALDEx2
+Plugin CSVTranspose inputfile Together/species/unnormalized.nofilter.exact.transpose.csv outputfile Together/species/unnormalized.nofilter.exact.csv
+Plugin CSVUnPad inputfile Together/species/unnormalized.nofilter.exact.csv outputfile Together/species/unnormalized.nofilter.transpose.nopad.csv
 Plugin ALDEx2 inputfile Parameters/parameters.aldex2.txt outputfile Differential/ALDEx2/output
 #######################################################################################################
 #######################################################################################################################

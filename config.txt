@@ -1,4 +1,4 @@
 Prefix pipelines/ADHD/
 Pipeline pipelines/ADHD/config.preprocess.txt
 Pipeline pipelines/ADHD/config.macroscale.txt
-Pipeline pipelines/ADHD/config.ecology.txt
+#Pipeline pipelines/ADHD/config.ecology.txt
