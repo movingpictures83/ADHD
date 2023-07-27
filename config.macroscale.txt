@@ -5,10 +5,10 @@ Plugin Tetachoric inputfile Parameters/parameters.tetachoric.txt outputfile none
 
 ###############################################################
 # DIVERSITY
-#Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
-#Kitty Diversity/Regular
-#Pipeline pipelines/ADHD/config.diversity.txt
-#Kitty .
+Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
+Kitty Diversity/Regular
+Pipeline pipelines/ADHD/config.diversity.txt
+Kitty .
 ###############################################################
 
 ###############################################################
@@ -51,8 +51,6 @@ Plugin LEfSe inputfile Differential/LEfSe/Control_ADHD/parameters.lefse.txt outp
 
 ########################################################################################################
 # DESEQ
-#Plugin PhyloSeq2CSV inputfile Parameters/parameters.phyloseq2csv.txt outputfile Together/species/unnormalized.nofilter.exact.csv
-#Plugin CSVTranspose inputfile Together/species/unnormalized.nofilter.exact.csv outputfile Together/species/unnormalized.nofilter.exact.transpose.csv
 Plugin CSVSmooth inputfile smooth.txt outputfile Together/species/unnormalized.nofilter.exact.transpose.csv
 Plugin DESeq inputfile Parameters/parameters.deseq.txt outputfile Differential/DESeq/deseq.csv
 Plugin DESeq2TXT inputfile Parameters/parameters.deseq2txt.txt outputfile Differential/DESeq/deseq.txt
