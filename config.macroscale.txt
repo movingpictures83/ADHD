@@ -8,6 +8,7 @@ Plugin Tetachoric inputfile Parameters/parameters.tetachoric.txt outputfile none
 Plugin ZeroPercent inputfile Parameters/parameters.zeropercent.txt outputfile none
 Kitty Diversity/Regular
 Pipeline pipelines/ADHD/config.diversity.txt
+Kitty .
 ###############################################################
 
 ###############################################################
