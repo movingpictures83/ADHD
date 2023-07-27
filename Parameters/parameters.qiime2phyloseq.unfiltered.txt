@@ -1,0 +1,2 @@
+otufile	Together/species/unnormalized.nofilter.transpose.tsv
+mapping	Qiime/mapping.txt

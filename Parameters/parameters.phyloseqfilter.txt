@@ -1,0 +1,7 @@
+OTU	PhyloSeq/sample.unfiltered.otu.csv
+TAX	PhyloSeq/sample.unfiltered.tax.csv
+META	PhyloSeq/sample.data.twocol.csv
+threshold	50
+keepifone	true
+OTUFilter	sample.otu.partialfilter.csv
+TAXFilter	sample.tax.partialfilter.csv
