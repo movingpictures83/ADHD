@@ -1,5 +1,5 @@
-taxa	Together/species/unnormalized.quoted.transpose2.csv
-deseq	deseq.csv
-group1	Control
-group2	ADHD
+taxa	Together/species/unnormalized.nofilter.exact.transpose.csv
+deseq	Differential/DESeq/deseq.csv
+group1	ADHD
+group2	Control
 pvalue	0.05
