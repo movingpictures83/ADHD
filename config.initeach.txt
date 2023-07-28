@@ -1,0 +1,6 @@
+Plugin Trimmomatic inputfile ../../../Parameters/parameters.trimmomatic.txt outputfile trimmed.fastq
+Plugin SeqPrep inputfile ../../../Parameters/parameters.seqprep.txt outputfile .
+Plugin Gunzip inputfile seqprep_assembled.fastq.gz outputfile seqprep_assembled.fastq
+Plugin FASTQ2FASTA inputfile seqprep_assembled.fastq outputfile seqprep_assembled.fasta
+Plugin USEARCH61 inputfile ../../../Parameters/parameters.usearch61.txt outputfile .
+Plugin FASTACount inputfile denovo_abundance_sorted.fna outputfile none
