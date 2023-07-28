@@ -1,0 +1,6 @@
+PE
+R1.fastq.gz
+R2.fastq.gz
+ILLUMINACLIP:pipelines/ADHD/TruSeq3-PE.fa:2:30:5
+SLIDINGWINDOW:4:20
+MINLEN:101

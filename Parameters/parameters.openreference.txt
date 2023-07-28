@@ -1,0 +1,2 @@
+fnafiles	fnafiles.txt
+database	/biorg/data/DB/GreenGenes/gg_13_8_99.fasta
